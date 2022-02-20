@@ -8,6 +8,9 @@ public class letterScript : MonoBehaviour
     public bool blackBin;
     private GameObject letterThing;
     public int Score;
+    private GameObject thing;
+    
+
 
     private void Awake()
     {
@@ -23,8 +26,10 @@ public class letterScript : MonoBehaviour
     {
         if (blackBin == true && letterThing.name == "blackLetter") 
         {
+            GameObject.Destroy(thing);
             print("dez");
             Score += 1;
+            
         }
     }
 }
