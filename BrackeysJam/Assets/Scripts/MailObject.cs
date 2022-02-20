@@ -7,8 +7,10 @@ public class MailObject : MonoBehaviour
     public string color;
     public bool hasStamp;
     public string shape;
-    
-    
+
+    public Sprite squareSprite;
+    public Sprite circleSprite;
+    public Sprite triangleSprite;
 
     public SpriteRenderer stamp;
 
@@ -27,6 +29,25 @@ public class MailObject : MonoBehaviour
                 
                 break;
             default:
+                color = "White";
+                gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+                break;
+        }
+
+        switch (shape) 
+        {
+            case "Square":
+                gameObject.GetComponent<SpriteRenderer>().sprite = squareSprite;
+                break;
+            case "Triangle":
+                gameObject.GetComponent<SpriteRenderer>().sprite = triangleSprite;
+                break;
+            case "Circle":
+                gameObject.GetComponent<SpriteRenderer>().sprite = circleSprite;
+                break;
+            default:
+                shape = "Square";
+                gameObject.GetComponent<SpriteRenderer>().sprite = squareSprite;
                 break;
         }
 

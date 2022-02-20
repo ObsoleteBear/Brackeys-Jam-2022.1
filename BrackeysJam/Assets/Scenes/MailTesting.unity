@@ -155,7 +155,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: Black
   hasStamp: 1
-  shape: Deez
+  shape: Square
+  squareSprite: {fileID: 7482667652216324306, guid: adef747e338414040bdbb4a835adcd4a, type: 3}
+  circleSprite: {fileID: 21300000, guid: ebadffe109420ea40a7fd1680ff3f72a, type: 3}
+  triangleSprite: {fileID: 21300000, guid: fe7362fab4876b745be70f1d3b3205d9, type: 3}
   stamp: {fileID: 1114270727}
 --- !u!212 &649050368
 SpriteRenderer:
