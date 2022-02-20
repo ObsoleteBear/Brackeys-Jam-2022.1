@@ -23,6 +23,7 @@ public class letterScript : MonoBehaviour
     {
         if (blackBin == true && letterThing.name == "blackLetter") 
         {
+            print("dez");
             Score += 1;
         }
     }

@@ -8,6 +8,7 @@ public class playerController : MonoBehaviour
     public Rigidbody2D rb;
     Vector2 movement;
     private float deez;
+    private float nuts;
     private SpriteRenderer sprite;
 
     private void Awake()
@@ -30,16 +31,26 @@ public class playerController : MonoBehaviour
         {
             sprite.flipX = true;
         }
+        if(nuts >0)
+        {
             
+        }
+        if (nuts < 0)
+        {
+            print("deez");
+            sprite.flipY = false;
+        }
+
     }
     
 
     private void FixedUpdate()
     {
         deez = Input.GetAxis("Horizontal");
+        nuts = Input.GetAxis("Vertical");
         movement.Normalize();
         rb.velocity = new Vector2(movement.x * speed * Time.deltaTime, movement.y * speed * Time.deltaTime);
-        print(deez);
+        print(nuts);
     }
 
     
