@@ -10,9 +10,7 @@ public class playerController : MonoBehaviour
     private float deez;
     private float nuts;
     private SpriteRenderer sprite;
-    public Sprite deeztop;
-    public Sprite deezbottom;
-    public Sprite urmom;
+    public Transform thing;
 
     private void Awake()
     {
@@ -28,21 +26,21 @@ public class playerController : MonoBehaviour
 
         if(deez > 0)
         {
-            sprite.flipX = false;
-            gameObject.GetComponent<SpriteRenderer>().sprite = urmom;
+            transform.Rotate(-1, 0, 0);
+            
         } 
         if(deez < 0)
         {
-            sprite.flipX = true;
-            gameObject.GetComponent<SpriteRenderer>().sprite = urmom;
+            transform.localScale = new Vector3(transform.localScale.x * 1, transform.localScale.y, transform.localScale.z);
+
         }
         if(nuts > 0)
         {
-            gameObject.GetComponent<SpriteRenderer>().sprite = deeztop;
+            transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y * -1, transform.localScale.z);
         }
         if (nuts < 0)
         {
-            gameObject.GetComponent<SpriteRenderer>().sprite = deezbottom;
+            transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y * 1, transform.localScale.z);
         }
 
     }
