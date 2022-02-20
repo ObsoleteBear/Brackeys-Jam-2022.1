@@ -12,6 +12,7 @@ public class letterScript : MonoBehaviour
     private void Awake()
     {
         letterThing = GameObject.FindGameObjectWithTag("Letter");
+        
     }
     private void Update()
     {
