@@ -7,6 +7,8 @@ public class MailObject : MonoBehaviour
     public string color;
     public bool hasStamp;
     public string shape;
+    
+    
 
     public SpriteRenderer stamp;
 
@@ -20,8 +22,9 @@ public class MailObject : MonoBehaviour
             case "Red":
                 gameObject.GetComponent<SpriteRenderer>().color = Color.red;
                 break;
-            case "Yellow":
-                gameObject.GetComponent<SpriteRenderer>().color = Color.yellow;
+            case "Black":
+                gameObject.GetComponent<SpriteRenderer>().color = Color.black;
+                
                 break;
             default:
                 break;
@@ -35,5 +38,8 @@ public class MailObject : MonoBehaviour
         {
             stamp.enabled = false;
         }
+
+        
+
     }
 }
