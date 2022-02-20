@@ -413,11 +413,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 949e741c118dffd4b873e6d0e42b7057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 550
-  rb: {fileID: 1036582767}
-  deeztop: {fileID: 21300000, guid: 0bcb2b243898d804b9cb7b5fc4ff8ca8, type: 3}
-  deezbottom: {fileID: 21300000, guid: 305c9ceacc3bc98418a7037f648e43c5, type: 3}
-  urmom: {fileID: 21300000, guid: a33408643d2bfc542aa95f481fb84a8e, type: 3}
+  speed: 10
+  rotationSpeed: 1.2459811e+18
 --- !u!212 &1036582770
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -501,6 +498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grabDetect: {fileID: 975032085}
   boxHolder: {fileID: 257245144}
+  holding: 0
   rayDist: 2
 --- !u!1 &1165517508
 GameObject:
