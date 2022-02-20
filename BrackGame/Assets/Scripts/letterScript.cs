@@ -12,6 +12,7 @@ public class letterScript : MonoBehaviour
     private void Awake()
     {
         letterThing = GameObject.FindGameObjectWithTag("Letter");
+        
     }
     private void Update()
     {
@@ -22,6 +23,7 @@ public class letterScript : MonoBehaviour
     {
         if (blackBin == true && letterThing.name == "blackLetter") 
         {
+            print("dez");
             Score += 1;
         }
     }
