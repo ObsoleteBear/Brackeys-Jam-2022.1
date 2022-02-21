@@ -5,7 +5,7 @@ using UnityEngine;
 public class MailObject : MonoBehaviour
 {
     public string color;
-    public bool hasStamp;
+    public string countryStamp;
     public string shape;
 
     public Sprite squareSprite;
@@ -13,6 +13,13 @@ public class MailObject : MonoBehaviour
     public Sprite triangleSprite;
 
     public SpriteRenderer stamp;
+    public Sprite usaStamp;
+    public Sprite britainStamp;
+    public Sprite mexicoStamp;
+    public Sprite canadaStamp;
+    public Sprite euStamp;
+    public Sprite chinaStamp;
+    public Sprite noStamp;
 
     public void Update()
     {
@@ -51,13 +58,29 @@ public class MailObject : MonoBehaviour
                 break;
         }
 
-        if (hasStamp)
+        switch (countryStamp)
         {
-            stamp.enabled = true;
-        }
-        else
-        {
-            stamp.enabled = false;
+            case "United States":
+                stamp.sprite = usaStamp;
+                break;
+            case "Britain":
+                stamp.sprite = britainStamp;
+                break;
+            case "Mexico":
+                stamp.sprite = mexicoStamp;
+                break;
+            case "Canada":
+                stamp.sprite = canadaStamp;
+                break;
+            case "European Union":
+                stamp.sprite = euStamp;
+                break;
+            case "China":
+                stamp.sprite = chinaStamp;
+                break;
+            default:
+                stamp.sprite = noStamp;
+                break;
         }
 
         
