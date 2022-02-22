@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 809602521}
   m_Layer: 0
   m_Name: MailSpawner
-  m_TagString: Untagged
+  m_TagString: MailSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,7 +153,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mailPrefab: {fileID: 5854370872493054050, guid: b07cf29b29e65e84ba498f7577fe218a, type: 3}
+  mailDespawn: 4
   timer: 0
+  playerScore: 3
 --- !u!4 &809602522
 Transform:
   m_ObjectHideFlags: 0

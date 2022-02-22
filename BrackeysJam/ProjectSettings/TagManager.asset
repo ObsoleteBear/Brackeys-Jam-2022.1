@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Letter
   - Box
+  - MailSpawner
   layers:
   - Default
   - TransparentFX
