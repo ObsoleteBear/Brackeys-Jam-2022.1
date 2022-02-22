@@ -25,9 +25,15 @@ public class MailObject : MonoBehaviour
     public Sprite chinaStamp;
     public Sprite noStamp;
 
+    public MailSpawn mailSpawn;
+    public binScript binScript;
+
     public void Awake()
     {
-        despawnTimer = GameObject.FindGameObjectWithTag("MailSpawner").GetComponent<MailSpawn>().mailDespawn; 
+        inBin = false;
+        despawnTimer = GameObject.FindGameObjectWithTag("MailSpawner").GetComponent<MailSpawn>().mailDespawn;
+        mailSpawn = GameObject.FindGameObjectWithTag("MailSpawner").GetComponent<MailSpawn>();
+        binScript = GameObject.FindGameObjectWithTag("Bin").GetComponent<binScript>();
     }
     public void Update()
     {
@@ -95,9 +101,10 @@ public class MailObject : MonoBehaviour
         {
             despawnTimer -= Time.deltaTime;
         }
-        else
+        if(inBin == true)
         {
-            //code to run when its in the bin
+            
+            Destroy(gameObject);
         }
 
         if (despawnTimer <= 0)
@@ -105,6 +112,13 @@ public class MailObject : MonoBehaviour
             GameObject.FindGameObjectWithTag("MailSpawner").GetComponent<MailSpawn>().LosePoints(mailCost);
             Destroy(gameObject);
         }
-
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (binScript.isBlackBin == true && color == "Black")
+        {
+            //inBin = true;
+            mailSpawn.playerScore += 1;
+        }
     }
 }
