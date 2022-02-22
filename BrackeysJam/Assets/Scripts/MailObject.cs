@@ -115,7 +115,11 @@ public class MailObject : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if(collision.tag == "Bin" && binScript.binColor == "Black" && inBin == false)
+        {
+            inBin = true;
+            mailSpawn.playerScore += 1;
+        }
         
     }
 }
