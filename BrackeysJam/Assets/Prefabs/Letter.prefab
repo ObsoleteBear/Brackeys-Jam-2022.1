@@ -202,6 +202,7 @@ MonoBehaviour:
   chinaStamp: {fileID: 21300000, guid: c1262cea02924d74ab4449f267c0beb4, type: 3}
   noStamp: {fileID: 21300000, guid: e96ee31c232e68f4ba6567656ddc9a02, type: 3}
   mailSpawn: {fileID: 0}
+  binScript: {fileID: 0}
 --- !u!61 &4842027833930266265
 BoxCollider2D:
   m_ObjectHideFlags: 0
