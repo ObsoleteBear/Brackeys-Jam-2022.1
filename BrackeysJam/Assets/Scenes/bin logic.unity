@@ -551,8 +551,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grabDetect: {fileID: 1984239634}
   boxHolder: {fileID: 247904016}
-  holding: 0
-  rayDist: 5
+  mailHeld: {fileID: 0}
+  holdForce: 10
+  rayDist: 8
 --- !u!1 &1477522645
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,7 +568,7 @@ GameObject:
   - component: {fileID: 1477522646}
   m_Layer: 0
   m_Name: Square
-  m_TagString: Box
+  m_TagString: Letter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -603,7 +604,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

@@ -8,6 +8,10 @@ public class MailObject : MonoBehaviour
     public string countryStamp;
     public string shape;
 
+    public float despawnTimer;
+    public bool inBin;
+    public int mailCost;
+
     public Sprite squareSprite;
     public Sprite circleSprite;
     public Sprite triangleSprite;
@@ -21,6 +25,10 @@ public class MailObject : MonoBehaviour
     public Sprite chinaStamp;
     public Sprite noStamp;
 
+    public void Awake()
+    {
+        despawnTimer = GameObject.FindGameObjectWithTag("MailSpawner").GetComponent<MailSpawn>().mailDespawn; 
+    }
     public void Update()
     {
         switch (color)
@@ -83,7 +91,20 @@ public class MailObject : MonoBehaviour
                 break;
         }
 
-        
+        if (inBin == false)
+        {
+            despawnTimer -= Time.deltaTime;
+        }
+        else
+        {
+            //code to run when its in the bin
+        }
+
+        if (despawnTimer <= 0)
+        {
+            GameObject.FindGameObjectWithTag("MailSpawner").GetComponent<MailSpawn>().LosePoints(mailCost);
+            Destroy(gameObject);
+        }
 
     }
 }
