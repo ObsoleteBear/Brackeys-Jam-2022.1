@@ -37,6 +37,7 @@ public class binScript : MonoBehaviour
     public void MailTouched(string color, string country, string shape, MailObject mail)
     {
         bool mailTrue = true;
+        
         //check if its the right color
         switch (color)
         {
@@ -86,6 +87,108 @@ public class binScript : MonoBehaviour
         if (!mailTrue)
         {
             mail.binFail();
+        }
+
+        switch (country)
+        {
+            case "United States":
+                if(usaStamp)
+                {
+                    mailTrue = true;
+                } else
+                {
+                    mailTrue = false;
+                }
+                break;
+            case "Britain":
+                if (britainStamp)
+                {
+                    mailTrue = true;
+                }
+                else
+                {
+                    mailTrue = false;
+                }
+                break;
+            case "Mexico":
+                if (mexicoStamp)
+                {
+                    mailTrue = true;
+                }
+                else
+                {
+                    mailTrue = false;
+                }
+                break;
+            case "Canada":
+                if (canadaStamp)
+                {
+                    mailTrue = true;
+                }
+                else
+                {
+                    mailTrue = false;
+                }
+                break;
+            case "European Union":
+                if (euStamp)
+                {
+                    mailTrue = true;
+                }
+                else
+                {
+                    mailTrue = false;
+                }
+                break;
+            case "China":
+                if (chinaStamp)
+                {
+                    mailTrue = true;
+                }
+                else
+                {
+                    mailTrue = false;
+                }
+                break;
+        }
+        if (!mailTrue)
+        {
+            mail.binFail();
+        }
+
+        switch(shape)
+        {
+            case "Square":
+                if (square)
+                {
+                    mailTrue = true;
+                }
+                else
+                {
+                    mailTrue = false;
+                }
+                break;
+            case "Triangle":
+                if (triangle)
+                {
+                    mailTrue = true;
+                }
+                else
+                {
+                    mailTrue = false;
+                }
+                break;
+            case "Circle":
+                if (circle)
+                {
+                    mailTrue = true;
+                }
+                else
+                {
+                    mailTrue = false;
+                }
+                break;
+            
         }
 
     }
