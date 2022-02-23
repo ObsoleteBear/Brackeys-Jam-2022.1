@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    void PlayGame()
+    public void PlayGame()
     {
-        SceneManager.LoadScene("put scene here");
+        SceneManager.LoadScene(sceneName: ("Yourmom"));
+        Application.OpenURL("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
     }
 
     private void Update()
