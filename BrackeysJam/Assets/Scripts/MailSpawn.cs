@@ -6,7 +6,11 @@ public class MailSpawn : MonoBehaviour
 {
     public GameObject mailPrefab;
 
-    public float mailDespawn;
+    public float mailSpawnMin;
+    public float mailSpawnMax;
+
+    public float mailDespawnMax;
+    public float mailDespawnMin;
     public float timer;
     public int playerScore;
     // Start is called before the first frame update
@@ -23,7 +27,7 @@ public class MailSpawn : MonoBehaviour
         {
             GameObject mailPiece = Instantiate(mailPrefab, transform.position, Quaternion.identity);
             mailPiece.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-90, 90), -Random.Range(50, 90)));
-            timer = Random.Range(4, 9);
+            timer = Random.Range(mailSpawnMin, mailSpawnMax);
         }
     }
 

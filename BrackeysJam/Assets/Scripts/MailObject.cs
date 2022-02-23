@@ -9,8 +9,6 @@ public class MailObject : MonoBehaviour
     public string shape;
 
     public float despawnTimer;
-    public float despawnMin;
-    public float despawnMax;
     public bool inBin;
     public int mailCost;
 
@@ -33,9 +31,63 @@ public class MailObject : MonoBehaviour
     public void Awake()
     {
         inBin = false;
-        despawnTimer = GameObject.FindGameObjectWithTag("MailSpawner").GetComponent<MailSpawn>().mailDespawn;
         mailSpawn = GameObject.FindGameObjectWithTag("MailSpawner").GetComponent<MailSpawn>();
         binScript = GameObject.FindGameObjectWithTag("Bin").GetComponent<binScript>();
+        despawnTimer = Random.Range(mailSpawn.mailDespawnMin, mailSpawn.mailDespawnMax);
+        //color randomizer
+        switch (Random.Range(1, 4)) 
+        {
+            case 1:
+                color = "Blue";
+                break;
+            case 2:
+                color = "Red";
+                break;
+            case 3:
+                color = "Black";
+                break;
+            case 4:
+                color = "White";
+                break;
+        }
+        //shape randomizer
+        switch (Random.Range(1, 3)) 
+        {
+            case 1:
+                shape = "Square";
+                break;
+            case 2:
+                shape = "Triangle";
+                break;
+            case 3:
+                shape = "Circle";
+                break;
+        }
+        //country randomizer
+        switch (Random.Range(1, 7)) 
+        {
+            case 1:
+                countryStamp = "United States";
+                break;
+            case 2:
+                countryStamp = "Britain";
+                break;
+            case 3:
+                countryStamp = "Mexico";
+                break;
+            case 4:
+                countryStamp = "Canada";
+                break;
+            case 5:
+                countryStamp = "European Union";
+                break;
+            case 6:
+                countryStamp = "China";
+                break;
+            case 7:
+                countryStamp = "None";
+                break;
+        }
     }
     public void Update()
     {
@@ -67,10 +119,6 @@ public class MailObject : MonoBehaviour
                 break;
             case "Circle":
                 gameObject.GetComponent<SpriteRenderer>().sprite = circleSprite;
-                break;
-            default:
-                shape = "Square";
-                gameObject.GetComponent<SpriteRenderer>().sprite = squareSprite;
                 break;
         }
 
