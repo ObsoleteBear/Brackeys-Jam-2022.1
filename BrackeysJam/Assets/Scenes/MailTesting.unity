@@ -292,20 +292,20 @@ MonoBehaviour:
   mailObject: {fileID: 5854370872493054051, guid: b07cf29b29e65e84ba498f7577fe218a, type: 3}
   mailSpawn: {fileID: 809602521}
   sign: {fileID: 1978375721}
-  square: 0
-  circle: 0
-  triangle: 0
-  black: 0
-  blue: 0
-  red: 0
-  white: 0
-  usaStamp: 0
-  britainStamp: 0
-  mexicoStamp: 0
-  canadaStamp: 0
-  euStamp: 0
-  chinaStamp: 0
-  noStamp: 0
+  square: 1
+  circle: 1
+  triangle: 1
+  black: 1
+  blue: 1
+  red: 1
+  white: 1
+  usaStamp: 1
+  britainStamp: 1
+  mexicoStamp: 1
+  canadaStamp: 1
+  euStamp: 1
+  chinaStamp: 1
+  noStamp: 1
 --- !u!212 &102312400
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -658,20 +658,20 @@ MonoBehaviour:
   mailObject: {fileID: 5854370872493054051, guid: b07cf29b29e65e84ba498f7577fe218a, type: 3}
   mailSpawn: {fileID: 809602521}
   sign: {fileID: 1651102833}
-  square: 0
-  circle: 0
-  triangle: 0
-  black: 0
-  blue: 0
-  red: 0
-  white: 0
-  usaStamp: 0
-  britainStamp: 0
-  mexicoStamp: 0
-  canadaStamp: 0
-  euStamp: 0
-  chinaStamp: 0
-  noStamp: 0
+  square: 1
+  circle: 1
+  triangle: 1
+  black: 1
+  blue: 1
+  red: 1
+  white: 1
+  usaStamp: 1
+  britainStamp: 1
+  mexicoStamp: 1
+  canadaStamp: 1
+  euStamp: 1
+  chinaStamp: 1
+  noStamp: 1
 --- !u!212 &385171980
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1076,20 +1076,20 @@ MonoBehaviour:
   mailObject: {fileID: 5854370872493054051, guid: b07cf29b29e65e84ba498f7577fe218a, type: 3}
   mailSpawn: {fileID: 809602521}
   sign: {fileID: 1798493843}
-  square: 0
-  circle: 0
-  triangle: 0
-  black: 0
-  blue: 0
-  red: 0
-  white: 0
-  usaStamp: 0
-  britainStamp: 0
-  mexicoStamp: 0
-  canadaStamp: 0
-  euStamp: 0
-  chinaStamp: 0
-  noStamp: 0
+  square: 1
+  circle: 1
+  triangle: 1
+  black: 1
+  blue: 1
+  red: 1
+  white: 1
+  usaStamp: 1
+  britainStamp: 1
+  mexicoStamp: 1
+  canadaStamp: 1
+  euStamp: 1
+  chinaStamp: 1
+  noStamp: 1
 --- !u!212 &625615967
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1272,7 +1272,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mailPrefab: {fileID: 5854370872493054050, guid: b07cf29b29e65e84ba498f7577fe218a, type: 3}
-  mailDespawn: 100
+  mailSpawnMin: 10
+  mailSpawnMax: 10
+  mailDespawnMax: 30
+  mailDespawnMin: 25
   timer: 0
   playerScore: 3
 --- !u!4 &809602522
@@ -1411,20 +1414,20 @@ MonoBehaviour:
   mailObject: {fileID: 5854370872493054051, guid: b07cf29b29e65e84ba498f7577fe218a, type: 3}
   mailSpawn: {fileID: 809602521}
   sign: {fileID: 1660861483}
-  square: 0
-  circle: 0
-  triangle: 0
-  black: 0
-  blue: 0
-  red: 0
-  white: 0
-  usaStamp: 0
-  britainStamp: 0
-  mexicoStamp: 0
-  canadaStamp: 0
-  euStamp: 0
-  chinaStamp: 0
-  noStamp: 0
+  square: 1
+  circle: 1
+  triangle: 1
+  black: 1
+  blue: 1
+  red: 1
+  white: 1
+  usaStamp: 1
+  britainStamp: 1
+  mexicoStamp: 1
+  canadaStamp: 1
+  euStamp: 1
+  chinaStamp: 1
+  noStamp: 1
 --- !u!212 &901297851
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1739,20 +1742,20 @@ MonoBehaviour:
   mailObject: {fileID: 5854370872493054051, guid: b07cf29b29e65e84ba498f7577fe218a, type: 3}
   mailSpawn: {fileID: 809602521}
   sign: {fileID: 79508548}
-  square: 0
-  circle: 0
-  triangle: 0
-  black: 0
-  blue: 0
-  red: 0
-  white: 0
-  usaStamp: 0
-  britainStamp: 0
-  mexicoStamp: 0
-  canadaStamp: 0
-  euStamp: 0
-  chinaStamp: 0
-  noStamp: 0
+  square: 1
+  circle: 1
+  triangle: 1
+  black: 1
+  blue: 1
+  red: 1
+  white: 1
+  usaStamp: 1
+  britainStamp: 1
+  mexicoStamp: 1
+  canadaStamp: 1
+  euStamp: 1
+  chinaStamp: 1
+  noStamp: 1
 --- !u!212 &1269113785
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2160,20 +2163,20 @@ MonoBehaviour:
   mailObject: {fileID: 5854370872493054051, guid: b07cf29b29e65e84ba498f7577fe218a, type: 3}
   mailSpawn: {fileID: 809602521}
   sign: {fileID: 313386241}
-  square: 0
-  circle: 0
-  triangle: 0
-  black: 0
-  blue: 0
-  red: 0
-  white: 0
-  usaStamp: 0
-  britainStamp: 0
-  mexicoStamp: 0
-  canadaStamp: 0
-  euStamp: 0
-  chinaStamp: 0
-  noStamp: 0
+  square: 1
+  circle: 1
+  triangle: 1
+  black: 1
+  blue: 1
+  red: 1
+  white: 1
+  usaStamp: 1
+  britainStamp: 1
+  mexicoStamp: 1
+  canadaStamp: 1
+  euStamp: 1
+  chinaStamp: 1
+  noStamp: 1
 --- !u!212 &1886902325
 SpriteRenderer:
   m_ObjectHideFlags: 0
