@@ -9,6 +9,8 @@ public class MailObject : MonoBehaviour
     public string shape;
 
     public float despawnTimer;
+    public float despawnMin;
+    public float despawnMax;
     public bool inBin;
     public int mailCost;
 
@@ -115,11 +117,21 @@ public class MailObject : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Bin" && binScript.binColor == "Black" && inBin == false)
+        if(collision.tag == "Bin" && inBin == false)
         {
-            inBin = true;
-            mailSpawn.playerScore += 1;
+            collision.GetComponent<binScript>().MailTouched(color, countryStamp, shape, this);
         }
-        
+    }
+
+    public void TouchedBin()
+    {
+        inBin = true;
+        mailSpawn.playerScore += mailCost;
+    }
+
+    public void binFail()
+    {
+        inBin = true;
+        mailSpawn.playerScore -= mailCost;
     }
 }
