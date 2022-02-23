@@ -188,8 +188,13 @@ public class binScript : MonoBehaviour
                     mailTrue = false;
                 }
                 break;
-            
         }
-
+        if (!mailTrue)
+        {
+            mail.binFail();
+        }else
+        {
+            mail.TouchedBin();
+        }
     }
 }
