@@ -26,9 +26,5 @@ public class playerController : MonoBehaviour
             Quaternion toRotation = Quaternion.LookRotation(Vector3.forward, movementDirection);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
         }
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Application.OpenURL("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
-        }
     }
 }
