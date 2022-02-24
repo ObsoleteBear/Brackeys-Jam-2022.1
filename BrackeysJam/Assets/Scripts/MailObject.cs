@@ -35,7 +35,7 @@ public class MailObject : MonoBehaviour
         binScript = GameObject.FindGameObjectWithTag("Bin").GetComponent<binScript>();
         despawnTimer = Random.Range(mailSpawn.mailDespawnMin, mailSpawn.mailDespawnMax);
         //color randomizer
-        switch (Random.Range(1, 4)) 
+        switch (Random.Range(1, 5)) 
         {
             case 1:
                 color = "Blue";
@@ -51,7 +51,7 @@ public class MailObject : MonoBehaviour
                 break;
         }
         //shape randomizer
-        switch (Random.Range(1, 3)) 
+        switch (Random.Range(1, 4)) 
         {
             case 1:
                 shape = "Square";
@@ -64,7 +64,7 @@ public class MailObject : MonoBehaviour
                 break;
         }
         //country randomizer
-        switch (Random.Range(1, 7)) 
+        switch (Random.Range(1, 8)) 
         {
             case 1:
                 countryStamp = "United States";
@@ -159,7 +159,7 @@ public class MailObject : MonoBehaviour
 
         if (despawnTimer <= 0)
         {
-            GameObject.FindGameObjectWithTag("MailSpawner").GetComponent<MailSpawn>().LosePoints(mailCost);
+            mailSpawn.playerScore -= mailCost;
             Destroy(gameObject);
         }
     }
@@ -173,13 +173,13 @@ public class MailObject : MonoBehaviour
 
     public void TouchedBin()
     {
-        inBin = true;
         mailSpawn.playerScore += mailCost;
+        inBin = true;
     }
 
     public void binFail()
     {
-        inBin = true;
         mailSpawn.playerScore -= mailCost;
+        inBin = true;
     }
 }

@@ -88,113 +88,119 @@ public class binScript : MonoBehaviour
         {
             mail.binFail();
         }
-
-        switch (country)
+        else
         {
-            case "United States":
-                if(usaStamp)
+            switch (country)
+            {
+                case "United States":
+                    if (usaStamp)
+                    {
+                        mailTrue = true;
+                    }
+                    else
+                    {
+                        mailTrue = false;
+                    }
+                    break;
+                case "Britain":
+                    if (britainStamp)
+                    {
+                        mailTrue = true;
+                    }
+                    else
+                    {
+                        mailTrue = false;
+                    }
+                    break;
+                case "Mexico":
+                    if (mexicoStamp)
+                    {
+                        mailTrue = true;
+                    }
+                    else
+                    {
+                        mailTrue = false;
+                    }
+                    break;
+                case "Canada":
+                    if (canadaStamp)
+                    {
+                        mailTrue = true;
+                    }
+                    else
+                    {
+                        mailTrue = false;
+                    }
+                    break;
+                case "European Union":
+                    if (euStamp)
+                    {
+                        mailTrue = true;
+                    }
+                    else
+                    {
+                        mailTrue = false;
+                    }
+                    break;
+                case "China":
+                    if (chinaStamp)
+                    {
+                        mailTrue = true;
+                    }
+                    else
+                    {
+                        mailTrue = false;
+                    }
+                    break;
+            }
+            if (!mailTrue)
+            {
+                mail.binFail();
+            }
+            else
+            {
+                switch (shape)
                 {
-                    mailTrue = true;
-                } else
-                {
-                    mailTrue = false;
+                    case "Square":
+                        if (square)
+                        {
+                            mailTrue = true;
+                        }
+                        else
+                        {
+                            mailTrue = false;
+                        }
+                        break;
+                    case "Triangle":
+                        if (triangle)
+                        {
+                            mailTrue = true;
+                        }
+                        else
+                        {
+                            mailTrue = false;
+                        }
+                        break;
+                    case "Circle":
+                        if (circle)
+                        {
+                            mailTrue = true;
+                        }
+                        else
+                        {
+                            mailTrue = false;
+                        }
+                        break;
                 }
-                break;
-            case "Britain":
-                if (britainStamp)
+                if (!mailTrue)
                 {
-                    mailTrue = true;
+                    mail.binFail();
                 }
                 else
                 {
-                    mailTrue = false;
+                    mail.TouchedBin();
                 }
-                break;
-            case "Mexico":
-                if (mexicoStamp)
-                {
-                    mailTrue = true;
-                }
-                else
-                {
-                    mailTrue = false;
-                }
-                break;
-            case "Canada":
-                if (canadaStamp)
-                {
-                    mailTrue = true;
-                }
-                else
-                {
-                    mailTrue = false;
-                }
-                break;
-            case "European Union":
-                if (euStamp)
-                {
-                    mailTrue = true;
-                }
-                else
-                {
-                    mailTrue = false;
-                }
-                break;
-            case "China":
-                if (chinaStamp)
-                {
-                    mailTrue = true;
-                }
-                else
-                {
-                    mailTrue = false;
-                }
-                break;
-        }
-        if (!mailTrue)
-        {
-            mail.binFail();
-        }
-
-        switch(shape)
-        {
-            case "Square":
-                if (square)
-                {
-                    mailTrue = true;
-                }
-                else
-                {
-                    mailTrue = false;
-                }
-                break;
-            case "Triangle":
-                if (triangle)
-                {
-                    mailTrue = true;
-                }
-                else
-                {
-                    mailTrue = false;
-                }
-                break;
-            case "Circle":
-                if (circle)
-                {
-                    mailTrue = true;
-                }
-                else
-                {
-                    mailTrue = false;
-                }
-                break;
-        }
-        if (!mailTrue)
-        {
-            mail.binFail();
-        }else
-        {
-            mail.TouchedBin();
+            }
         }
     }
 }
