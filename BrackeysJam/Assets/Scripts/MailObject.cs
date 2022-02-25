@@ -27,7 +27,6 @@ public class MailObject : MonoBehaviour
 
     public MailSpawn mailSpawn;
     public binScript binScript;
-
     public void Awake()
     {
         inBin = false;

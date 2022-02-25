@@ -152,6 +152,16 @@ public class binScript : MonoBehaviour
                         mailTrue = false;
                     }
                     break;
+                case "None":
+                    if (noStamp)
+                    {
+                        mailTrue = true;
+                    }
+                    else
+                    {
+                        mailTrue = false;
+                    }
+                    break;
             }
             if (!mailTrue)
             {
