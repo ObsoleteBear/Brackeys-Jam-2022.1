@@ -162,11 +162,11 @@ public class MailObject : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.tag == "Bin" && inBin == false)
+        if(collision.gameObject.tag == "Bin" && inBin == false)
         {
-            collision.GetComponent<binScript>().MailTouched(color, countryStamp, shape, this);
+            collision.gameObject.GetComponent<binScript>().MailTouched(color, countryStamp, shape, this);
         }
     }
 

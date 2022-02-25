@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5854370870819179668}
   - component: {fileID: 5854370870819179675}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 5854370872493054051}
   - component: {fileID: 4842027833930266265}
   - component: {fileID: 4313313111115552248}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Letter
   m_TagString: Letter
   m_Icon: {fileID: 0}

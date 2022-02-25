@@ -21,18 +21,20 @@ public class GrabController : MonoBehaviour
     {
         RaycastHit2D grabCheck = Physics2D.Raycast(boxHolder.position, grabDetect.localPosition, rayDist);
         
-        if (grabCheck.collider != null && grabCheck.collider.tag == "Letter")
+        if (grabCheck.collider != null)
         {
-            if (Input.GetKeyDown(KeyCode.E) && mailHeld == null && grabCheck != mailHeld)
+            if (Input.GetKeyDown(KeyCode.E) && mailHeld == null && grabCheck != mailHeld && grabCheck.collider.tag == "Letter")
             {
                 //grabCheck.collider.gameObject.transform.parent = boxHolder;
                 grabCheck.collider.gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
                 mailHeld = grabCheck.collider.gameObject;
+                mailHeld.tag = "HeldLetter";
             }
             else if (Input.GetKeyDown(KeyCode.E) && mailHeld != null)
             {
                 //grabCheck.collider.gameObject.transform.parent = null;
-                grabCheck.collider.gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
+                mailHeld.GetComponent<Rigidbody2D>().isKinematic = true;
+                mailHeld.transform.tag = "Letter";
                 mailHeld = null;
             }
         }
